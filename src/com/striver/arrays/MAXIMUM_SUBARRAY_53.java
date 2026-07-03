@@ -28,15 +28,29 @@ public class MAXIMUM_SUBARRAY_53 {
 
             // Optimal Aprroach (Kadane's Algorithm)
             int i, sum = 0, max = Integer.MIN_VALUE;
+            int start=0;
+            int ansstart=0;
+            int ansend=0;
             for (i = 0; i < nums.length; i++) {
                 sum = sum + nums[i];
+                if(sum ==0){
+                    start=i;
+                }
                 if (max < sum) {
                     max = sum;
+                    ansstart = start;
+                    ansend = i;
                 }
                 if (sum < 0)
                     sum = 0;
 
             }
+
+            // Printing of Subarray
+            for(int j=ansstart;j<ansend;j++){
+                System.out.print(nums[j] + ",");
+            }
+            System.out.println('\n');
             return max;
         }
     static void main() {
