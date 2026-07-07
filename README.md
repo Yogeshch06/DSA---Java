@@ -21,7 +21,7 @@ I'm solving problems topic-wise following a structured 4-month roadmap from arra
 
 ```bash
 # Clone the repo
-git clone https://github.com/Yogeshch06/<repo-name>.git
+git clone https://github.com/Yogeshch06/DSA--Java.git
 
 # Navigate to a topic folder
 cd Arrays
